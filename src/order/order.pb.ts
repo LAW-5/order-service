@@ -66,7 +66,9 @@ export interface OrderServiceClient {
 
   listOrder(request: ListOrderRequest): Observable<ListOrderResponse>;
 
-  listMerchantOrder(request: ListMerchantOrderRequest): Observable<ListMerchantOrderResponse>;
+  listMerchantOrder(
+    request: ListMerchantOrderRequest,
+  ): Observable<ListMerchantOrderResponse>;
 
   editOrder(request: EditOrderRequest): Observable<EditOrderResponse>;
 }
@@ -87,11 +89,11 @@ export interface OrderServiceController {
     | ListOrderResponse;
 
   listMerchantOrder(
-      request: ListMerchantOrderRequest,
-    ):
-      | Promise<ListMerchantOrderResponse>
-      | Observable<ListMerchantOrderResponse>
-      | ListMerchantOrderResponse;
+    request: ListMerchantOrderRequest,
+  ):
+    | Promise<ListMerchantOrderResponse>
+    | Observable<ListMerchantOrderResponse>
+    | ListMerchantOrderResponse;
 
   editOrder(
     request: EditOrderRequest,
