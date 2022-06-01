@@ -3,6 +3,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Order } from './order/order.entity';
 import { OrderModule } from './order/order.module';
 import 'dotenv/config';
+import { Cart } from './cart/cart.entity';
+import { CartModule } from './cart/cart.module';
 
 @Module({
   imports: [
@@ -12,10 +14,11 @@ import 'dotenv/config';
       ssl: {
         rejectUnauthorized: false,
       },
-      entities: [Order],
+      entities: [Order, Cart],
       synchronize: true,
     }),
     OrderModule,
+    CartModule,
   ],
 })
 export class AppModule {}

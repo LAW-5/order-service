@@ -13,7 +13,6 @@ import {
   ListOrderResponse,
   ListMerchantOrderResponse,
   EditOrderResponse,
-  ORDER_SERVICE_NAME,
 } from './order.pb';
 
 @Injectable()
