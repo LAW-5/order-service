@@ -20,6 +20,9 @@ export class CreateOrderDto implements CreateOrderRequest {
   public readonly quantity: number;
   
   @IsString()
+  public readonly name: string;
+  
+  @IsString()
   public readonly address: string;
 
   @IsNumber()

@@ -25,6 +25,7 @@ export class OrderService {
     merchantId,
     productId,
     quantity,
+    name,
     address,
     promoId,
   }: CreateOrderDto): Promise<CreateOrderResponse> {
@@ -33,6 +34,7 @@ export class OrderService {
     order.merchantId  = merchantId;
     order.productId  = productId;
     order.quantity  = quantity;
+    order.name  = name;
     order.address  = address;
     order.promoId = promoId;
     order.orderStatus = 'Menunggu Konfirmasi';
@@ -61,6 +63,7 @@ export class OrderService {
         orderStatus: x.orderStatus,
         productId: x.productId,
         quantity: x.quantity,
+        name: x.name,
         address: x.address,
       }),
     );
@@ -87,6 +90,7 @@ export class OrderService {
         orderStatus: x.orderStatus,
         productId: x.productId,
         quantity: x.quantity,
+        name: x.name,
         address: x.address,
       }),
     );

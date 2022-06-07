@@ -21,6 +21,9 @@ export class Order extends BaseEntity {
   public orderStatus: string;
 
   @Column({ type: 'varchar' })
+  public name: string;
+
+  @Column({ type: 'varchar' })
   public address: string;
 
   @Column({ type: 'int', default: 0 })
