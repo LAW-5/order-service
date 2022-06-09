@@ -5,6 +5,7 @@ import { join } from 'path';
 import { AppModule } from './app.module';
 import { protobufPackage as protobufPackageCart } from './cart/cart.pb';
 import { protobufPackage } from './order/order.pb';
+import 'dotenv/config';
 
 async function bootstrap() {
   const app: INestMicroservice = await NestFactory.createMicroservice(

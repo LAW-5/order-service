@@ -18,15 +18,15 @@ export class CreateOrderDto implements CreateOrderRequest {
 
   @IsNumber()
   public readonly quantity: number;
-  
+
   @IsString()
   public readonly name: string;
-  
+
   @IsString()
   public readonly address: string;
 
   @IsNumber()
-  public readonly promoId: number[];
+  public readonly promoId: number;
 
   @IsString()
   public readonly orderStatus: string;
@@ -45,7 +45,7 @@ export class ListMerchantOrderDto implements ListMerchantOrderRequest {
 export class EditOrderDto implements EditOrderRequest {
   @IsNumber()
   public readonly id: number;
-  
+
   @IsString()
   public readonly orderStatus: string;
 }

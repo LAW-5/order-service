@@ -27,5 +27,5 @@ export class Order extends BaseEntity {
   public address: string;
 
   @Column({ type: 'int', default: 0 })
-  public promoId: number[];
+  public promoId: number;
 }

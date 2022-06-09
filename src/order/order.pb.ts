@@ -13,7 +13,7 @@ export interface CreateOrderRequest {
   quantity: number;
   name: string;
   address: string;
-  promoId: number[];
+  promoId: number;
   orderStatus: string;
 }
 
