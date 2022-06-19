@@ -9,11 +9,11 @@ export const protobufPackage = 'order';
 export interface CreateOrderRequest {
   userId: number;
   merchantId: number;
-  productId: number;
-  quantity: number;
+  productId: number[];
+  quantity: number[];
+  totalPrice: number;
   name: string;
   address: string;
-  promoId: number;
   orderStatus: string;
 }
 
@@ -33,8 +33,9 @@ export interface ListMerchantOrderRequest {
 export interface Order {
   id: number;
   orderStatus: string;
-  productId: number;
-  quantity: number;
+  productId: number[];
+  quantity: number[];
+  totalPrice: number;
   name: string;
   address: string;
 }

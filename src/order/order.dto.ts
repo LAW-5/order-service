@@ -14,19 +14,19 @@ export class CreateOrderDto implements CreateOrderRequest {
   public readonly merchantId: number;
 
   @IsNumber()
-  public readonly productId: number;
+  public readonly productId: number[];
 
   @IsNumber()
-  public readonly quantity: number;
+  public readonly quantity: number[];
+
+  @IsNumber()
+  public readonly totalPrice: number;
 
   @IsString()
   public readonly name: string;
 
   @IsString()
   public readonly address: string;
-
-  @IsNumber()
-  public readonly promoId: number;
 
   @IsString()
   public readonly orderStatus: string;

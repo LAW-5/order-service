@@ -11,21 +11,21 @@ export class Order extends BaseEntity {
   @Column({ type: 'int' })
   public merchantId: number;
 
-  @Column({ type: 'int' })
-  public productId: number;
+  @Column({ type: 'int', array:true })
+  public productId: number[];
+
+  @Column({ type: 'int', array:true })
+  public quantity: number[];
 
   @Column({ type: 'int' })
-  public quantity: number;
-
-  @Column({ type: 'varchar' })
-  public orderStatus: string;
-
+  public totalPrice: number;
+  
   @Column({ type: 'varchar' })
   public name: string;
-
+  
   @Column({ type: 'varchar' })
   public address: string;
 
-  @Column({ type: 'int', default: 0 })
-  public promoId: number;
+  @Column({ type: 'varchar' })
+  public orderStatus: string;
 }

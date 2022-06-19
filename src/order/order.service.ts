@@ -29,19 +29,19 @@ export class OrderService {
     merchantId,
     productId,
     quantity,
+    totalPrice,
     name,
     address,
-    promoId,
   }: CreateOrderDto): Promise<CreateOrderResponse> {
     let order = new Order();
     order.userId = userId;
     order.merchantId = merchantId;
     order.productId = productId;
     order.quantity = quantity;
+    order.totalPrice = totalPrice;
     order.name = name;
     order.address = address;
-    order.promoId = promoId;
-    order.orderStatus = 'Menunggu Konfirmasi';
+    order.orderStatus = 'Dikemas';
 
     await this.repository.save(order);
 
@@ -67,6 +67,7 @@ export class OrderService {
         orderStatus: x.orderStatus,
         productId: x.productId,
         quantity: x.quantity,
+        totalPrice: x.totalPrice,
         name: x.name,
         address: x.address,
       }),
@@ -99,6 +100,7 @@ export class OrderService {
         orderStatus: x.orderStatus,
         productId: x.productId,
         quantity: x.quantity,
+        totalPrice: x.totalPrice,
         name: x.name,
         address: x.address,
       }),
